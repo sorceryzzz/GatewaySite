@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.WebPoint", "Dinlun.GatewaySite.WebPoint\Dinlun.GatewaySite.WebPoint.csproj", "{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebUI", "WebUI", "{871719CE-E98D-4B79-9C82-8D14765EF292}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{FA311249-233C-438C-B722-98E31F6A7ABB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dal", "Dal", "{7DA2C390-9B71-415D-BC10-72B92B7B62D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bll", "Bll", "{6F0B5000-7C70-4C5E-B434-E5A366454482}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C64FDECC-6D32-403A-BAF3-E2AD4F2053B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Model", "Dinlun.GatewaySite.Model\Dinlun.GatewaySite.Model.csproj", "{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Dal", "Dinlun.GatewaySite.Dal\Dinlun.GatewaySite.Dal.csproj", "{FD317724-6DD1-4D7F-AB9A-A056621863FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Common", "Dinlun.GatewaySite.Common\Dinlun.GatewaySite.Common.csproj", "{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Bll", "Dinlun.GatewaySite.Bll\Dinlun.GatewaySite.Bll.csproj", "{3D285FF8-13AB-4193-812B-775BFDE2DDD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD317724-6DD1-4D7F-AB9A-A056621863FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD317724-6DD1-4D7F-AB9A-A056621863FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD317724-6DD1-4D7F-AB9A-A056621863FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD317724-6DD1-4D7F-AB9A-A056621863FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71B4B6D9-72A3-4D41-A573-DB1AEF0EA8F3} = {871719CE-E98D-4B79-9C82-8D14765EF292}
+		{A9AEFA5A-B51F-4DA0-B913-BF2D1AA31514} = {FA311249-233C-438C-B722-98E31F6A7ABB}
+		{FD317724-6DD1-4D7F-AB9A-A056621863FD} = {7DA2C390-9B71-415D-BC10-72B92B7B62D6}
+		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A} = {C64FDECC-6D32-403A-BAF3-E2AD4F2053B1}
+		{3D285FF8-13AB-4193-812B-775BFDE2DDD0} = {6F0B5000-7C70-4C5E-B434-E5A366454482}
+	EndGlobalSection
+EndGlobal
