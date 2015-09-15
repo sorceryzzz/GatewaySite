@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.Bll", "Dinlun.GatewaySite.Bll\Dinlun.GatewaySite.Bll.csproj", "{3D285FF8-13AB-4193-812B-775BFDE2DDD0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{3470AE05-E757-435D-927E-24D413A1A871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dinlun.GatewaySite.WebPoint.UnitTest", "Dinlun.GatewaySite.WebPoint.UnitTest\Dinlun.GatewaySite.WebPoint.UnitTest.csproj", "{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D285FF8-13AB-4193-812B-775BFDE2DDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +67,6 @@ Global
 		{FD317724-6DD1-4D7F-AB9A-A056621863FD} = {7DA2C390-9B71-415D-BC10-72B92B7B62D6}
 		{91B0CA9A-76BA-4EE6-9C2D-91C55F999A5A} = {C64FDECC-6D32-403A-BAF3-E2AD4F2053B1}
 		{3D285FF8-13AB-4193-812B-775BFDE2DDD0} = {6F0B5000-7C70-4C5E-B434-E5A366454482}
+		{7A97B8D5-4AB4-4545-AA3C-BA4891B8BBF5} = {3470AE05-E757-435D-927E-24D413A1A871}
 	EndGlobalSection
 EndGlobal
