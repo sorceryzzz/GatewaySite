@@ -158,9 +158,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsMsgController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewsMsg\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -239,6 +239,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Bll\Dinlun.GatewaySite.Bll.csproj">
+      <Project>{3d285ff8-13ab-4193-812b-775bfde2ddd0}</Project>
+      <Name>Dinlun.GatewaySite.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Dal\Dinlun.GatewaySite.Dal.csproj">
+      <Project>{fd317724-6dd1-4d7f-ab9a-a056621863fd}</Project>
+      <Name>Dinlun.GatewaySite.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Model\Dinlun.GatewaySite.Model.csproj">
+      <Project>{a9aefa5a-b51f-4da0-b913-bf2d1aa31514}</Project>
+      <Name>Dinlun.GatewaySite.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dinlun.GatewaySite.Model.News
 {
-   public  class NewsMsg
+   public  class NewsMsgModel
    {
        #region - feild -
        private int _ID;

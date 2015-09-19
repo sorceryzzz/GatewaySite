@@ -39,8 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="News\NewsMsgBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Common\Dinlun.GatewaySite.Common.csproj">
+      <Project>{91b0ca9a-76ba-4ee6-9c2d-91c55f999a5a}</Project>
+      <Name>Dinlun.GatewaySite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Dal\Dinlun.GatewaySite.Dal.csproj">
+      <Project>{fd317724-6dd1-4d7f-ab9a-a056621863fd}</Project>
+      <Name>Dinlun.GatewaySite.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Model\Dinlun.GatewaySite.Model.csproj">
+      <Project>{a9aefa5a-b51f-4da0-b913-bf2d1aa31514}</Project>
+      <Name>Dinlun.GatewaySite.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
