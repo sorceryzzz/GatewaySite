@@ -14,7 +14,64 @@ namespace Dinlun.GatewaySite.Dal.News
     {
 
         #region - method -
+       /// <summary>
+       /// 查询新闻动态详情
+       /// </summary>
+       /// <param name="newsId"></param>
+       /// <returns></returns>
+       public NewsMsgModel GetNewsMsgDetail(int newsId)
+       {
+           NewsMsgModel newsMsgModel = null;
 
+
+           #region - sql qy -
+           string selectDetailQy = @"SELECT
+                                       `ID`,
+                                       `Title`,
+                                       `Content`,
+                                       `NewsType`,
+                                       `ImgUrl`,
+                                       `InsertTime`,
+                                       `avg1`,
+                                       `avg2`
+                                     FROM `dinlun`.`newsmsg` AS newsmsg
+                                     WHERE newsmsg.`ID`=@ID";
+           #endregion
+
+           #region - paras -
+           MySqlParameter[] paras = 
+           {
+               new MySqlParameter("@ID",newsId)
+           };
+           #endregion
+
+           #region - Excute -
+           try
+           {
+               //记录查询
+               DataTable dataTable = DbHelperMySql.GetDataSet(DbHelperMySql.connectionStringManager, selectDetailQy, paras).Tables[0];
+
+               if (dataTable != null)
+               {
+
+                   foreach (DataRow row in dataTable.Rows)
+                   {
+                       newsMsgModel=TransNewsMsgModel(row);
+                   }
+               }
+           }
+           catch (Exception ex)
+           {
+
+               throw;
+           }
+
+           #endregion
+
+
+           return newsMsgModel;
+
+       }
         /// <summary>
         /// 获取新闻动态
         /// </summary>

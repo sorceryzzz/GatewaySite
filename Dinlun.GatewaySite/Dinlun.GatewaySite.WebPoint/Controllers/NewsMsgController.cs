@@ -31,6 +31,29 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         }
 
         /// <summary>
+        /// 获取新闻动态详情
+        /// </summary>
+        /// <param name="newsId"></param>
+        /// <returns></returns>
+        public ContentResult GetNewsMsgDetail(int newsId)
+        {
+
+            #region - check paras -
+            if (newsId<0)
+            {
+                return Content("Error");
+                
+            }
+            #endregion
+
+            #region - excute  -
+            var obj = _newsMsgBllInstance.GetNewsMsgDetail(newsId);
+            #endregion
+
+            return Content(JsonConvert.SerializeObject(obj));
+        }
+
+        /// <summary>
         /// 获取新闻动态
         /// </summary>
         /// <param name="newsType"></param>
