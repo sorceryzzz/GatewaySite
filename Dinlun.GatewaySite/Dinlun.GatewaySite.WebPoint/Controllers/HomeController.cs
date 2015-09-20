@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dinlun.GatewaySite.Bll;
+using Dinlun.GatewaySite.Model.Prodcut;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,32 +10,24 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
 {
     public class HomeController : Controller
     {
+        private ProdcutBll prodcutBll = new ProdcutBll();
+
+
+
+
         public ActionResult Index()
         {
-
-
-
-
-
             return View();
         }
 
-
-
-
-
-        public ActionResult About()
+        /// <summary>
+        /// 获取产品信息
+        /// </summary>
+        /// <returns></returns>
+        public IList<ProdcutModel> GetProdcutList()
         {
-            ViewBag.Message = "Your application description page.";
+           return   prodcutBll.GetProductList();
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }
