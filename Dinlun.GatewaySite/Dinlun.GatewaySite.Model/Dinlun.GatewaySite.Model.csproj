@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="News\NewsMsgModel.cs" />
     <Compile Include="Prodcut\ProdcutModel.cs" />
+    <Compile Include="Prodcut\ProductDetailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

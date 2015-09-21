@@ -16,6 +16,15 @@ namespace Dinlun.GatewaySite.Bll
        public ProdcutBll() { }
 
         #region - method -
+              /// <summary>
+       /// 获取产品详情
+       /// </summary>
+       /// <param name="prodcutID">产品ID</param>
+       /// <returns></returns>
+       public ProductDetailModel GetProdcutDetailBy(int prodcutID)
+       {
+           return _prodcutInstance.GetProdcutDetailBy(prodcutID);
+       }
        /// <summary>
        /// 获取产品信息
        /// </summary>
