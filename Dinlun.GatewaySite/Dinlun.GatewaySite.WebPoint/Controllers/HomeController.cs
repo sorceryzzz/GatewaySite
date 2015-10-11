@@ -29,5 +29,38 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
            return   prodcutBll.GetProductList();
 
         }
+        /// <summary>
+        /// 公司简介
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult About()
+        {
+
+
+            return View();
+        }
+
+
+        /// <summary>
+        /// 招贤纳士
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult ZhaoPin()
+        {
+
+            return View();
+        }
+        /// <summary>
+        /// 联系我们
+        /// </summary>
+        /// <returns></returns>
+       [HttpGet]
+        public ActionResult ContactUs()
+        {
+
+            return View();
+        }
     }
 }

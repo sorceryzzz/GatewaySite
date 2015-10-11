@@ -1,0 +1,145 @@
+﻿		
+/* --------- µ¼º½ ----------------*/
+
+#navMenu {
+	overflow:hidden;
+
+	background-image:url(../images/csc_img/menu_bg_home.jpg);
+	width:1000px;
+	margin:0 auto;
+position:absolute;top:89px;left:50%;width:1000px;margin-left:-450px;height:38px;line-height:38px;
+}
+
+
+
+#navMenu ul {
+	padding:0;
+	margin:0 auto;
+}
+
+#navMenu ul li {
+
+	float:left;	
+	height: 38x;
+	line-height:38px;
+	width:132px;
+	border-left:0px solid #ccc;
+	text-align:center;
+	font-size:14px;
+	font-family:"Î¢ÈíÑÅºÚ",Arial, Helvetica, sans-serif;
+	list-style-type:none;
+	background-image:url(../images/bjehome_menu_libg.png);
+}
+
+#navMenu ul li:hover {
+color:#FFFFFF;
+}
+#hover_menu{	
+	cursor:pointer;
+	display:inline-block;
+	height:38px;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+	color:#ebf5e9;
+	width:132px;
+}
+#hover_menu span{	background:url(../images/bjehome_menu_lihoverbg.png) no-repeat;
+
+}
+#navMenu ul li a {
+	color: #333;
+	text-decoration:none;
+	display: inline-block;
+	position: relative;
+	list-style-type:none;	
+}
+
+#navMenu ul li a.hover {
+	color:#025BC9;
+	height: 38px;
+	line-height:38px;	
+	text-decoration:none;
+	display: inline-block;
+	position: relative;
+	width:132px;	
+}
+
+    
+
+#navMenu ul li span {
+	cursor:pointer;
+	display:inline-block;
+	height:38px;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+	color:#ebf5e9;
+	width:132px;	
+}
+/*-------- ÏÂÀ­²Ëµ¥ --------------*/
+
+.dropMenu {
+
+	position:absolute;
+	top:0;
+	z-index:100;
+	margin:0;
+	padding:5px 0px;	
+	width: 132px;
+	visibility: hidden;
+	border-bottom: 0px solid #0084C2;
+	background-color: #FFF;
+}
+
+
+
+.dropMenu li {
+	height:32px;
+	line-height:32px;
+	padding:3px 10px;
+	border-bottom:1px solid #efefef;
+	background-color:#FFFFFF;
+	list-style-type:none;
+	text-align:left;
+}
+.dropMenu li:hover{
+	border-bottom:1px solid #FFF;
+	background-color:#0084C2;
+}
+}
+.dropMenu li:hover a{
+	color:#FFF;
+}
+
+.dropMenu a {
+
+	width: auto;
+
+	display: block;
+
+	color:#333;
+
+	font-family:Arial, Helvetica, sans-serif;
+
+	font-family:"Î¢ÈíÑÅºÚ";
+
+	font-size:14px;
+
+}
+
+* html .dropMenu a {
+
+	width: 100%;
+
+}
+
+.dropMenu a:hover {
+
+	color:#FFF;
+
+	text-decoration: underline;
+
+}
+
+			

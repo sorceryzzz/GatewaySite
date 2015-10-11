@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Contact\ContactDescModel.cs" />
     <Compile Include="News\NewsMsgModel.cs" />
+    <Compile Include="News\ResultNewsMsgListModel.cs" />
     <Compile Include="Prodcut\ProdcutModel.cs" />
     <Compile Include="Prodcut\ProductDetailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

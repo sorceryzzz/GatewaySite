@@ -1,4 +1,5 @@
 ﻿using Dinlun.GatewaySite.Bll.News;
+using Dinlun.GatewaySite.Model.News;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,21 +22,40 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
 
         }
 
-
-
+        /// <summary>
+        /// 获取新闻列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         // GET: NewsMsg
-        public ActionResult Index()
+        public ActionResult Index(int newsType,int pageIndex,int pageSize)
         {
+
+            ViewBag.ResultNewsMsgListModel = GetNewsMsgList(newsType, pageIndex, pageSize);
+            ViewBag.PageIndex = pageIndex;
+            ViewBag.NewsType = newsType;
+            return View();
+        }
+        /// <summary>
+        /// 获取新闻详情
+        /// </summary>
+        /// <param name="newsId"></param>
+        /// <param name="newsType"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult NewsDetail(int newsId, int newsType)
+        {
+
+
 
             return View();
         }
-
         /// <summary>
         /// 获取新闻动态详情
         /// </summary>
         /// <param name="newsId"></param>
         /// <returns></returns>
-        public ContentResult GetNewsMsgDetail(int newsId)
+        public ContentResult GetNewsMsgDetail(int newsId,int newsType)
         {
 
             #region - check paras -
@@ -60,32 +80,32 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         /// <param name="pageIndex"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        public ContentResult GetNewsMsgList(int newsType, int pageIndex, int pageSize)
+        public ResultNewsMsgListModel GetNewsMsgList(int newsType, int pageIndex, int pageSize)
         {
             int pageCount=0;
 
             #region - check paras-
             int tmpInt = 0;
 
-            if (tmpInt<=0&&pageIndex<=0&&pageSize<10)
-            {
-                return Content("Error") ;
-            }
+            //if (tmpInt<=0&&pageIndex<=0&&pageSize<10)
+            //{
+            //    return null ;
+            //}
             #endregion
 
 
             #region - excute -
             var newsMsgList = _newsMsgBllInstance.GetNewsMsgList(newsType, pageIndex, pageSize, out  pageCount);
 
-            var obj=new{
-                pageCount=pageCount,
-                dataObj=newsMsgList
-            };
-            return Content(JsonConvert.SerializeObject(obj));
+
+            ResultNewsMsgListModel rlModel = new ResultNewsMsgListModel();
+            rlModel.NewsMsgList = newsMsgList;
+            rlModel.PageCount = pageCount;
+
+
+
+            return rlModel;
             #endregion
         }
-
-
-
     }
 }

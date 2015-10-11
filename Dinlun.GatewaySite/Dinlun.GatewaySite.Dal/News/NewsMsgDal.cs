@@ -81,7 +81,7 @@ namespace Dinlun.GatewaySite.Dal.News
        {
 
            IList<NewsMsgModel> newsMsgList = new List<NewsMsgModel>();
-
+           pageIndex = pageSize * (pageIndex - 1);
            #region - sql qy -
 
            string selectpageCountSql = @"SELECT  COUNT(1)
@@ -98,12 +98,8 @@ namespace Dinlun.GatewaySite.Dal.News
                                    `avg1`,
                                    `avg2`
                                  FROM `dinlun`.`newsmsg` AS newsmsg
-                                 WHERE newsmsg.`NewsType`=@NewsType
-                                 AND (newsmsg.ID >=(
-                                        SELECT MAX(newsmsgtmp.ID) FROM (
-                                            SELECT newsA.ID FROM `dinlun`.`newsmsg` AS newsA ORDER BY newsA.ID LIMIT @PageIndex,@PageSize) AS newsmsgtmp
-                                        ) )
-                                 ORDER BY newsmsg.ID DESC";
+                                 WHERE newsmsg.`NewsType`=@NewsType    
+                                 ORDER BY newsmsg.ID DESC limit @PageIndex,@PageSize";
            #endregion
 
            #region - paras -

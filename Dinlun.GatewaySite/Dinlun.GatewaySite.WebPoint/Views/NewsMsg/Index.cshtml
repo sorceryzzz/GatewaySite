@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Dinlun.GatewaySite.Model.News;
+
+@section scripts{
+    <script>
+        $(function () {
+            window.onload = function () {
+                var $li = $('.tab li');
+                var $ul = $('.content ul');
+
+                $li.mouseover(function () {
+                    var $this = $(this);
+                    var $t = $this.index();
+                    $li.removeClass();
+                    $this.addClass('thishover');
+                    $ul.css('display', 'none');
+                    $ul.eq($t).css('display', 'block');
+                })
+            }
+        });
+    </script>
+}
+<hr/>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+    <div class="w1000">
+        <div class="w1050">
+            <!-- tab标签代码begin -->
+
+            @*<div id="outer">
+                <ul class="tab">
+                    <a href='/a/xinwenzhongxin/xingyexinwen/'><li>行业新闻</li></a>
+                    <li style='background:url(/templets/default/images/ico2.png) no-repeat; color:#FFFFFF;'><a href='/a/xinwenzhongxin/gongsixinwen/'>公司新闻</a></li>
+
+                </ul>
+
+            </div>*@
+            <!-- tab标签代码end -->
+
+            <div class="webwidth_right_3">
+
+                <div class="web_right_2">
+                    <ul>
+                        @foreach (var item in ((ResultNewsMsgListModel)ViewBag.ResultNewsMsgListModel).NewsMsgList)
+                        {
+                            <li>
+                                <span style="float:left;"><a href="" class="title">@item.Title</a></span>
+                                <span style="float:right;">@item.InsertTime</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="dede_pages">
+                    <ul class="pagelist">
+                        <li><a id="pageUp">上一页</a></li>
+                        <li><a id='pageDown'>下一页</a></li>
+                        <li><span class="pageinfo">共 <strong>@(ViewBag.ResultNewsMsgListModel.PageCount)</strong>条</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="web_clear"></div>
+        </div>
+    </div>
+
+
+<div style="display=none">
+    <input type="hidden" id="pageIndex" value="@ViewBag.PageIndex" />
+    <input type="hidden"  id="newType" value="@ViewBag.NewsType" />
+</div>
+
+
+    <script type="text/javascript">    
+        $(function () {
+
+            $("#pageUp").click(function () {
+                var pageIndex = parseInt($("#pageIndex").val())-1;
+                if (pageIndex == 0) {
+                    return false;
+                }
+                var newsType=$("#newType").val();
+                location.href = "/newsmsg/index?pageindex=" + pageIndex + "&pagesize=10&" + "newsType=" + newsType;
+
+            });
+
+            $("#pageDown").click(function () {
+                var pageIndex = parseInt($("#pageIndex").val()) + 1;
+
+ 
+
+                var newsType = $("#newType").val();
+                location.href = "/newsmsg/index?pageIndex=" + pageIndex + "&pagesize=10&" + "newsType=" + newsType;
+            });
+
+        });
+    </script>

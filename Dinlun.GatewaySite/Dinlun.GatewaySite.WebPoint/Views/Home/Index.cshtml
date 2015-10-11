@@ -1,237 +1,170 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-
-<head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>北京欧蓝科技|排队机|银医通|银医通模块|银医通系统|银医一卡通|银医门诊一卡通|北京银医通|银医一卡通系统|医院一卡通系统|医院一卡通方案|银医通服务平台|医院外联平台</title>
-    <meta name="description" content="北京欧蓝科技提供医院自助服务解决方案，医院分诊排队解决方案，医院导诊解决方案，金融行业排队叫号解决方案 电信自助服务解决方案，电信排队系统解决方案，电力自助服务...
-" />
-    <meta name="keywords" content="银医通|银医通模块|银医通系统|银医一卡通|银医门诊一卡通|北京银医通|银医一卡通系统|医院一卡通系统|医院一卡通方案|银医通服务平台|医院外联平台|排队机" />
-  
-
-
-      <link href="WebCMS.css" tppabs="http://www.olkiosk.com/templets/default/style/WebCMS.css" rel="stylesheet" media="screen" type="text/css" />
-      <link href="menu.css" tppabs="http://www.olkiosk.com/templets/default/style/menu.css" rel="stylesheet" media="screen" type="text/css" />
-      <script src="gundong_jiange.js" tppabs="http://www.olkiosk.com/templets/default/js/gundong_jiange.js" type=text/javascript></script>
-
-
-</head>
-<body class="index">
-    <div id="head_width">
-        <div class="header_top">
-            <div class="w1000">
-                <div class="web_logo"><a href="javascript:if(confirm(%27http://www.bjehome.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.bjehome.com/%27" tppabs="http://www.bjehome.com/"><img src="bjehome_logo.png" tppabs="http://www.olkiosk.com/templets/default/images/bjehome_logo.png" alt="北京欧蓝科技|排队机|银医通|银医通模块|银医通系统|银医一卡通|银医门诊一卡通|北京银医通|银医一卡通系统|医院一卡通系统|医院一卡通方案|银医通服务平台|医院外联平台" /></a></div>
-
-                <div class="web_top2"></div>
-                <div class="web_top3">
-                    <a href="index-7.htm" tppabs="http://www.olkiosk.com/a/lianxiwomen/zhaoxiannashi">招贤纳士</a> |
-
-                    <a href="" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.bjehome.com/');">设为首页</a> |
-
-                    <a href="javascript:window.external.AddFavorite('http://www.bjehome.com/','北京欧蓝科技|排队机|银医通|银医通模块|银医通系统|银医一卡通|银医门诊一卡通|北京银医通|银医一卡通系统|医院一卡通系统|医院一卡通方案|银医通服务平台|医院外联平台')">加入收藏</a><br><br>
-                    <img src="bjehome_400tel.png" tppabs="http://www.olkiosk.com/templets/default/images/bjehome_400tel.png" alt="北京欧蓝科技|排队机|银医通|银医通模块|银医通系统|银医一卡通|银医门诊一卡通|北京银医通|银医一卡通系统|医院一卡通系统|医院一卡通方案|银医通服务平台|医院外联平台" />
-                </div>
-                <div class="web_clear"></div>
-            </div>
-        </div>
-
-        <div class="header_menu">
-            <div id="navMenu">
-                <ul>
-                    <li><a href="index.htm" tppabs="http://www.olkiosk.com/"><span>网站首页</span></a></li>
-
-                    <li><a href="index-1.htm" tppabs="http://www.olkiosk.com/a/gyol/"><span>关于欧蓝</span></a></li>
-
-                    <li><a href="index-2.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/" rel='dropmenu3'><span>解决方案</span></a></li>
-
-                    <li><a href="index-3.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/" rel='dropmenu1'><span>产品展示</span></a></li>
-
-                    <li><a href="index-4.htm" tppabs="http://www.olkiosk.com/a/lianxioulan/chengonganli/"><span>成功案例</span></a></li>
-
-                    <li><a href="index-5.htm" tppabs="http://www.olkiosk.com/a/xinwenzhongxin/" rel='dropmenu6'><span>公司动态</span></a></li>
-
-                    <li><a href="index-6.htm" tppabs="http://www.olkiosk.com/a/lianxiwomen/"><span>联系我们</span></a></li>
-
-                    <li><a href="index-7.htm" tppabs="http://www.olkiosk.com/a/lianxiwomen/zhaoxiannashi/"><span>招贤纳士</span></a></li>
-
-                </ul>
-            </div>
-        </div>
-        <!--<script language="javascript">
-        var speed = 100;
-        var scrollTop = null;
-        var hold = 0;
-        var head_width;
-        var pos = null;
-        var timer = null;
-        var moveHeight = null;
-        head_width = document.getElementById("head_width");
-        window.onscroll=scroll_ad;
-        function scroll_ad(){
-        scrollTop = document.documentElement.scrollTop+document.body.scrollTop;
-        pos = scrollTop - head_width.offsetTop;
-        pos = pos/10
-        moveHeight = pos>0?Math.ceil(pos):Math.floor(pos);
-        if(moveHeight!=0){
-        head_width.style.top = head_width.offsetTop+moveHeight+"px";
-        setTimeout(scroll_ad,speed);
-        }
-        //alert(scrollTop);
-        }
-        </script> -->
-    </div>
-    <div style="clear:both;"></div>
+<div style="clear:both;"></div>
     <div style="height:129px; width:1000px;"></div>
-
     <div class="w1000">
         <!--首页BANANER-->
         <script language='javascript'>
-	linkarr = new Array();
-	picarr = new Array();
-	textarr = new Array();
-	var swf_width=1000;
-	var swf_height=220;
-	//文字颜色|文字位置|文字背景颜色|文字背景透明度|按键文字颜色|按键默认颜色|按键当前颜色|自动播放时间|图片过渡效果|是否显示按钮|打开方式
-	var configtg='0xffffff|2|0xffffff|9|9xffffff|0xC5DDBC|0x000033|10|3|1|_blank';
-	var files = "";
-	var links = "";
-	var texts = "";
-	//这里设置调用标记
-	linkarr[1] = "";
-	picarr[1]  = "2-1503110Z950521.jpg"/*tpa=http://www.olkiosk.com/uploads/150311/2-1503110Z950521.jpg*/;
-	textarr[1] = "银医通";
-	//textarr[1] = "银医通";
-linkarr[2] = "";
-	picarr[2]  = "2-150319113435V1.jpg"/*tpa=http://www.olkiosk.com/uploads/150319/2-150319113435V1.jpg*/;
-	textarr[2] = "欧蓝企业";
-	//textarr[2] = "欧蓝企业";
-linkarr[3] = "";
-	picarr[3]  = "2-150311091333301.jpg"/*tpa=http://www.olkiosk.com/uploads/150311/2-150311091333301.jpg*/;
-	textarr[3] = "自助终端机";
-	//textarr[3] = "自助终端机";
-linkarr[4] = "";
-	picarr[4]  = "2-13121ZU530252.jpg"/*tpa=http://www.olkiosk.com/uploads/131219/2-13121ZU530252.jpg*/;
-	textarr[4] = "愿景";
-	//textarr[4] = "愿景";
-linkarr[5] = "";
-	picarr[5]  = "2-13121Z91PT45.jpg"/*tpa=http://www.olkiosk.com/uploads/131219/2-13121Z91PT45.jpg*/;
-	textarr[5] = "微信平台";
-	//textarr[5] = "微信平台";
+            linkarr = new Array();
+            picarr = new Array();
+            textarr = new Array();
+            var swf_width = 1000;
+            var swf_height = 220;
+            //文字颜色|文字位置|文字背景颜色|文字背景透明度|按键文字颜色|按键默认颜色|按键当前颜色|自动播放时间|图片过渡效果|是否显示按钮|打开方式
+            var configtg = '0xffffff|2|0xffffff|9|9xffffff|0xC5DDBC|0x000033|10|3|1|_blank';
+            var files = "";
+            var links = "";
+            var texts = "";
+            //这里设置调用标记
+            linkarr[1] = "";
+            picarr[1] = "2-1503110Z950521.jpg"/*tpa=http://www.olkiosk.com/uploads/150311/2-1503110Z950521.jpg*/;
+            textarr[1] = "银医通";
+            //textarr[1] = "银医通";
+            linkarr[2] = "";
+            picarr[2] = "2-150319113435V1.jpg"/*tpa=http://www.olkiosk.com/uploads/150319/2-150319113435V1.jpg*/;
+            textarr[2] = "欧蓝企业";
+            //textarr[2] = "欧蓝企业";
+            linkarr[3] = "";
+            picarr[3] = "2-150311091333301.jpg"/*tpa=http://www.olkiosk.com/uploads/150311/2-150311091333301.jpg*/;
+            textarr[3] = "自助终端机";
+            //textarr[3] = "自助终端机";
+            linkarr[4] = "";
+            picarr[4] = "2-13121ZU530252.jpg"/*tpa=http://www.olkiosk.com/uploads/131219/2-13121ZU530252.jpg*/;
+            textarr[4] = "愿景";
+            //textarr[4] = "愿景";
+            linkarr[5] = "";
+            picarr[5] = "2-13121Z91PT45.jpg"/*tpa=http://www.olkiosk.com/uploads/131219/2-13121Z91PT45.jpg*/;
+            textarr[5] = "微信平台";
+            //textarr[5] = "微信平台";
 
-	for(i=1;i<picarr.length;i++){
-	if(files=="") files = picarr[i];
-	else files += "|"+picarr[i];
-	}
-//	for(i=1;i<linkarr.length;i++){
-//	if(links=="") links = linkarr[i];
-//	else links += "|"+linkarr[i];
-//	}
-//	for(i=1;i<textarr.length;i++){
-//	if(texts=="") texts = textarr[i];
-//	else texts += "|"+textarr[i];
-//	}
-	document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
-	document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.olkiosk.com/templets/default/images/bcastr3.swf*/><param name="quality" value="high">');
-	document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
-	document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'">');
-	document.write('<embed src="bcastr3.swf"/*tpa=http://www.olkiosk.com/templets/default/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'&menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+            for (i = 1; i < picarr.length; i++) {
+                if (files == "") files = picarr[i];
+                else files += "|" + picarr[i];
+            }
+            //	for(i=1;i<linkarr.length;i++){
+            //	if(links=="") links = linkarr[i];
+            //	else links += "|"+linkarr[i];
+            //	}
+            //	for(i=1;i<textarr.length;i++){
+            //	if(texts=="") texts = textarr[i];
+            //	else texts += "|"+textarr[i];
+            //	}
+            //document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+            //document.write('<param name="movie" value="bcastr3.swf"/*tpa=http://www.olkiosk.com/templets/default/images/bcastr3.swf*/><param name="quality" value="high">');
+            //document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+            //document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'">');
+            //document.write('<embed src="bcastr3.swf"/*tpa=http://www.olkiosk.com/templets/default/images/bcastr3.swf*/ wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&bcastr_config='+configtg+'&menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
         </script>
 
     </div>
 
-    <!------------中间内容------------>
-    <div class="w1000">
-        <div class="w1050">
-            <!-------start---------------->
-            <div class="zhongjian_width">
-                <div class="zhongjian_width_shang_menu"><a href="index-2.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/"><img src="shang_1.jpg" tppabs="http://www.olkiosk.com/templets/default/images/shang_1.jpg"></a></div>
-                <div style=" clear:both;"></div>
-                <div class="zhongjian_width_shang">
-                    <ul>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="210.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2015/0709/210.html"><img src=" 2-150F9125511422.jpg" tppabs="http://www.olkiosk.com/uploads/150709/2-150F9125511422.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="210.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2015/0709/210.html"> 我司开发的智慧大厅排队管理系统，在政务大厅中的应用采取与政务工作完美结合的方式进行布署，让办事人员及企业可以直接了当的取选到自已所要办事的业务，政务大厅排队管理系统已成为政府工作中的得力助手！</a></div>
-                        </li>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="150.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/150.html"><img src=" 2-150325142QM32.jpg" tppabs="http://www.olkiosk.com/uploads/150325/2-150325142QM32.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="150.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/150.html"> 银医一卡通项目的基本原则是患者、医院和银行的多方共赢局面，系统建设首先要考虑方便患者使用，确实解决患者多种就诊问题，尤其是排队问题，针对医院，要求解决管理者对医院的整体监管和针对性的决策指导，缓解门诊护士任务繁琐，工作量大问题，减少患者排队，优化门诊</a></div>
-                        </li>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="208.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2015/0413/208.html"><img src=" 2-150424141S5127.jpg" tppabs="http://www.olkiosk.com/uploads/150424/2-150424141S5127.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="208.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2015/0413/208.html"> 医院自助打印系统在医院中有广泛的应用，如化验单打印、病历打印、住院日清单打印等各种自助报告打印等。</a></div>
-                        </li>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="151.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/151.html"><img src=" 2-150319114320Z7.jpg" tppabs="http://www.olkiosk.com/uploads/150319/2-150319114320Z7.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="151.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/151.html"> 目前居民健康卡项目和银医一卡通项目已然共同发展，多省业已明确要求医院一卡通系统须基于居民健康卡实施，我公司的银医一卡通方案在设计之初就考虑到系统的适应性和扩展性，因此在扩展居民健康卡的功能时，只需增加居民健康卡读卡模块即可，发卡是较独立的部分，只需通</a></div>
-                        </li>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="152.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/152.html"><img src=" 2-1503191141494G.jpg" tppabs="http://www.olkiosk.com/uploads/150319/2-1503191141494G.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="152.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/152.html"> 欧蓝掌上医院APP系统由北京欧蓝德畅电子技术有限公司通过长期的需求调研、改进、完善后发布的一款基IOS/Android平台的医疗行业APP应用，集成预约挂号、门诊缴费、查询服务、智能导诊、排队进度、医院评价、健康百科等功能模块，是一套功能齐全、方便患者到院求医、提升</a></div>
-                        </li>
-                        <li>
-                            <div class="zhongjian_width_shang_tu">  <a href="171.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1224/171.html"><img src=" 2-15031911404U52.jpg" tppabs="http://www.olkiosk.com/uploads/150319/2-15031911404U52.jpg"></a></div>
-                            <div class="zhongjian_width_shang_jianjie"><a href="171.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1224/171.html"> 传统医院患者初次到医院就诊时，一般首先在人工窗口排队建卡、挂号，再找到相应诊室排队就诊。拿到检查单或处方后，排队缴费，再进行检查、拿取检查单或取药。由于医院空间、人力有限，窗口往往都拥挤着长长的队伍。患者就医期间，需要缴费后再进行检查、取药，不得不在医院布局复杂的各楼层、科室间来回奔波，极为不便。由于患者本身就需要他人看护，不得不带更多人手来办理各种诊疗手续，进一步导致医院就医环境的混乱和恶化。传统的就医流程中普遍存在的“三长一短”和其它一些问题。</a></div>
-                        </li>
 
-                    </ul>
-                </div>
+<!------------中间内容------------>
 
-            </div>
-            <div style="clear:both;"></div>
-            <!----------end-------------->
-            <div class="zhongjian_width">
-                <div class="zhongjian_width_shang_menu"><a href="index-3.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/"><img src="shang_2.jpg" tppabs="http://www.olkiosk.com/templets/default/images/shang_2.jpg"></a></div>
-                <div style=" clear:both;"></div>
-                <div class="zhongjian_width_zhong">
-                    <div class="rollBox">
-                        <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
-                        <div class="Cont" id="ISL_Cont">
-                            <div class="ScrCont">
-                                <div id="List1">
-
-                                    <!-- 图片列表 begin -->
-                                    <div class="pic">
-                                        <a href="155.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2014/1219/155.html"><img src="2-150402115TV30.jpg" tppabs="http://www.olkiosk.com/uploads/150402/2-150402115TV30.jpg" width="180" height="240" /></a>
-                                        <p><a href="155.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2014/1219/155.html">SH10 现金/非现金 综合服务终端</a></p>
-                                    </div>
-                                    <div class="pic">
-                                        <a href="53.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2013/1213/53.html"><img src="2-141224132A31S.jpg" tppabs="http://www.olkiosk.com/uploads/141224/2-141224132A31S.jpg" width="180" height="240" /></a>
-                                        <p><a href="53.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2013/1213/53.html">SH07 现金/非现金 自助挂号缴费</a></p>
-                                    </div>
-                                    <div class="pic">
-                                        <a href="149.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2014/1119/149.html"><img src="2-15040115464L47.jpg" tppabs="http://www.olkiosk.com/uploads/150401/2-15040115464L47.jpg" width="180" height="240" /></a>
-                                        <p><a href="149.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2014/1119/149.html">SH08(自助打印终端）</a></p>
-                                    </div>
-                                    <div class="pic">
-                                        <a href="51.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2013/1213/51.html"><img src="2-15033116212NI.jpg" tppabs="http://www.olkiosk.com/uploads/150331/2-15033116212NI.jpg" width="180" height="240" /></a>
-                                        <p><a href="51.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/yinyizizhuzhongdu/2013/1213/51.html">SH04（自助挂号系统）</a></p>
-                                    </div>
-                                    <div class="pic">
-                                        <a href="157.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/fenzhendaozhenxit/2014/1219/157.html"><img src="2-141219153224N8.jpg" tppabs="http://www.olkiosk.com/uploads/141219/2-141219153224N8.jpg" width="180" height="240" /></a>
-                                        <p><a href="157.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/fenzhendaozhenxit/2014/1219/157.html">诊室一体机</a></p>
-                                    </div>
-                                    <div class="pic">
-                                        <a href="55.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/fenzhendaozhenxit/2013/1213/55.html"><img src="2-140221101K9645.jpg" tppabs="http://www.olkiosk.com/uploads/140221/2-140221101K9645.jpg" width="180" height="240" /></a>
-                                        <p><a href="55.html" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/fenzhendaozhenxit/2013/1213/55.html">医院导诊系统A型</a></p>
-                                    </div>
-
-
-                                    <!-- 图片列表 end -->
-
-                                </div>
-                                <div id="List2"></div>
+    @*首页轮播*@
+    <div class="zhongjian_width">
+        <div class="zhongjian_width_shang_menu">
+            <a href="index-3.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/"><img src="http://www.olkiosk.com/templets/default/images/shang_2.jpg" /></a>
+        </div>
+        <div style=" clear:both;"></div>
+        <div class="zhongjian_width_zhong">
+            <div class="rollBox">
+                <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
+                <div class="Cont" id="ISL_Cont">
+                    <div class="ScrCont">
+                        <div id="List1">
+                            <!-- 图片列表 begin -->
+                            <div class="pic">
+                                
+   
+                                <a href="155.html"><img src="~/Image/ShouYe/01aolin.jpg" width="180" height="240" /></a>
+                                <p><a href="155.html" >奥林匹克公园</a></p>
                             </div>
+                            <div class="pic">
+                                <a href="53.html" ><img src="~/Image/ShouYe/02sanli.JPG" width="180" height="240" /></a>
+                                <p><a href="53.html" >北京三里屯</a></p>
+                            </div>
+                            <img src="" />
+                            <img src="" />
+                            <img src="" />
+                            <img src="" />
+                            <div class="pic">
+                                <a href="149.html" ><img src="~/Image/ShouYe/03guojia.JPG" width="180" height="240" /></a>
+                                <p><a href="149.html">国家大剧院</a></p>
+                            </div>
+                            <div class="pic">
+                                <a href="51.html" ><img src="~/Image/ShouYe/04bangu.JPG"  width="180" height="240" /></a>
+                                <p><a href="51.html">盘古大观</a></p>
+                            </div>
+                            <div class="pic">
+                                <a href="157.html" ><img src="~/Image/ShouYe/05tiyu.jpg" width="180" height="240" /></a>
+                                <p><a href="157.html" >苏州体育中心</a></p>
+                            </div>
+                            <div class="pic">
+                                <a href="55.html" ><img src="~/Image/ShouYe/06suzhou.jpg"  width="180" height="240" /></a>
+                                <p><a href="55.html" >苏州中心</a></p>
+                            </div>
+
+                            <!-- 图片列表 end -->
+
                         </div>
-                        <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+                        <div id="List2"></div>
                     </div>
                 </div>
+                <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div>
+            </div>
+        </div>
 
-                <script language="javascript" type="text/javascript">
+        <div class="w1000">
+            <div class="w1050">
+                <!-------start---------------->
+                <div class="zhongjian_width">
+                    <div class="zhongjian_width_shang_menu">
+                        <a href="http://www.olkiosk.com/a/jiejuefangan/index-2.htm"><img src="http://www.olkiosk.com/templets/default/images/shang_1.jpg" /></a>
+                    </div>
+                    <div style=" clear:both;"></div>
+
+
+
+                    <div class="zhongjian_width_shang">
+                        <ul>
+                            <li>
+                                <div class="zhongjian_width_shang_tu">
+                                    <a href=""><img src="~/Image/JieJueFangAn/02.jpg" /></a>
+                                </div>
+
+                                <div class="zhongjian_width_shang_jianjie"><a href="210.html"> 我司开发的智慧大厅排队管理系统，在政务大厅中的应用采取与政务工作完美结合的方式进行布署，让办事人员及企业可以直接了当的取选到自已所要办事的业务，政务大厅排队管理系统已成为政府工作中的得力助手！</a></div>
+                            </li>
+                            <li>
+                                <div class="zhongjian_width_shang_tu">
+                                    <a href="150.html"><img src="~/Image/JieJueFangAn/03.jpg" /></a>
+                                </div>
+                                <div class="zhongjian_width_shang_jianjie"><a href="150.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/150.html"> 银医一卡通项目的基本原则是患者、医院和银行的多方共赢局面，系统建设首先要考虑方便患者使用，确实解决患者多种就诊问题，尤其是排队问题，针对医院，要求解决管理者对医院的整体监管和针对性的决策指导，缓解门诊护士任务繁琐，工作量大问题，减少患者排队，优化门诊</a></div>
+                            </li>
+                            <li>
+                                <div class="zhongjian_width_shang_tu">
+                                    <a href="208.html"><img src="~/Image/JieJueFangAn/04.jpg" /></a>
+                                </div>
+                                <div class="zhongjian_width_shang_jianjie"><a href="208.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2015/0413/208.html"> 医院自助打印系统在医院中有广泛的应用，如化验单打印、病历打印、住院日清单打印等各种自助报告打印等。</a></div>
+                            </li>
+                            <li>
+                                <div class="zhongjian_width_shang_tu">
+                                    <a href="151.html"><img src="~/Image/JieJueFangAn/05.jpg" /></a>
+                                </div>
+                                <div class="zhongjian_width_shang_jianjie"><a href="151.html" tppabs="http://www.olkiosk.com/a/fangan_ruanjian/2014/1215/151.html"> 目前居民健康卡项目和银医一卡通项目已然共同发展，多省业已明确要求医院一卡通系统须基于居民健康卡实施，我公司的银医一卡通方案在设计之初就考虑到系统的适应性和扩展性，因此在扩展居民健康卡的功能时，只需增加居民健康卡读卡模块即可，发卡是较独立的部分，只需通</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                <!----------end-------------->
+
+
+ <script language="javascript" type="text/javascript">
 <!--//--><![CDATA[//><!--
 //图片滚动列表 mengjia 070816
 var Speed = 1; //速度(毫秒)
@@ -324,32 +257,49 @@ function CompScr(){
             </div>
         </div>
         <div style="clear:both; overflow:hidden; 	background-color:#EEF4F9;"></div>
+
         <!----------end-------------->
         <div class="zhongjian_width">
-            <div class="zhongjian_width_shang_menu"><a href="index-4.htm" tppabs="http://www.olkiosk.com/a/lianxioulan/chengonganli/"><img src="shang_3.jpg" tppabs="http://www.olkiosk.com/templets/default/images/shang_3.jpg"></a></div>
+            <div class="zhongjian_width_shang_menu">
+                <a href="index-4.htm"><img src="http://www.olkiosk.com/templets/default/images/shang_3.jpg" /></a>
+            </div>
             <div style=" clear:both;"></div>
             <div class="zhongjian_width_xia">
-                <script src="gundong_jiange-1.js" tppabs="http://www.400all.cn/templets/default/js/gundong_jiange.js" type=text/javascript></script>
+                <script src="http://www.400all.cn/templets/default/js/gundong_jiange.js"  type=text/javascript></script>
                 <div class="haomatj" id=marqueediv1>
                     <ul>
                         <li>
-                            <div class="zhongjian_width_xia_tu"><a href="163.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1223/163.html"><img src=" 2-150324143404G0.jpg" tppabs="http://www.olkiosk.com/uploads/150324/2-150324143404G0.jpg"></a></div>
-                            <div class="zhongjian_width_xia_neirong"><a href="163.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1223/163.html">北京市顺义区医院始建于1947年3月，是集医疗、教学、科研、预防保健为一体的本辖区最大区域医疗中心，2013年12月30日，晋升为北京市三级综合医院。医院拥有4个北京市住院医师规范化培训基地（内科、外科、神经内科和全科医师培训基地）。医院共开放床位800张</a></div>
+                            <div class="zhongjian_width_xia_tu">
+              
+                                <a href="163.html" ><img src=" ~/Image/DianXing/1%e5%9b%bd%e5%ae%b6%e9%87%8d%e7%82%b9%e9%a1%b9%e7%9b%ae/1%e5%9b%bd%e5%ae%b6%e5%8d%9a%e7%89%a9%e9%a6%86.JPG"  /></a>
+                            </div>
+                            <div class="zhongjian_width_xia_neirong"><a href="163.html">北京市顺义区医院始建于1947年3月，是集医疗、教学、科研、预防保健为一体的本辖区最大区域医疗中心，2013年12月30日，晋升为北京市三级综合医院。医院拥有4个北京市住院医师规范化培训基地（内科、外科、神经内科和全科医师培训基地）。医院共开放床位800张</a></div>
+                        </li>
                         <li>
-                            <div class="zhongjian_width_xia_tu"><a href="193.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1225/193.html"><img src=" 2-150324144IE34.jpg" tppabs="http://www.olkiosk.com/uploads/150324/2-150324144IE34.jpg"></a></div>
-                            <div class="zhongjian_width_xia_neirong"><a href="193.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1225/193.html">首都医科大学附属北京同仁医院是北京市的一所三级甲等医院，现有员工200多人，科室37个，床位近900个。它的前身是1886年一美国基督教美以美会会士受派遣来华创立的一家眼科诊所，100多年来眼科一直是同仁医院的重点。</a></div>
+                            <div class="zhongjian_width_xia_tu">
+                                <a href="193.html"><img src=" ~/Image/DianXing/2%e5%9f%8e%e5%b8%82%e7%bb%bc%e5%90%88%e4%bd%93/2%e8%8b%8f%e5%b7%9e%e5%a4%aa%e6%b9%96%e6%96%b0%e5%9f%8e.jpg" /></a>
+                            </div>
+                            <div class="zhongjian_width_xia_neirong"><a href="193.html">首都医科大学附属北京同仁医院是北京市的一所三级甲等医院，现有员工200多人，科室37个，床位近900个。它的前身是1886年一美国基督教美以美会会士受派遣来华创立的一家眼科诊所，100多年来眼科一直是同仁医院的重点。</a></div>
+                        </li>
                         <li>
-                            <div class="zhongjian_width_xia_tu"><a href="172.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1224/172.html"><img src=" 2-150324144433W9.jpg" tppabs="http://www.olkiosk.com/uploads/150324/2-150324144433W9.jpg"></a></div>
-                            <div class="zhongjian_width_xia_neirong"><a href="172.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1224/172.html">北京中医药大学东直门医院东区（原北京市通州区中医医院）坐落于北京的东大门,始建于1982年，2010年6月正式迁入通州区翠屏西路116号新址。随着通州区国际化新城的新概念，古老的京东大地被赋予了北京发展新磁极，首都功能新载体的全新定位。在这宏大而璀璨的历史背景下</a></div>
+                            <div class="zhongjian_width_xia_tu">
+
+                                <a href="172.html" ><img src="~/Image/DianXing/3%e9%ab%98%e7%ab%af%e5%8a%9e%e5%85%ac%e6%a5%bc/10%e6%9c%94%e9%bb%84%e5%8f%91%e5%b1%95%e5%a4%a7%e5%8e%a6.jpg" /></a>
+                            </div>
+                            <div class="zhongjian_width_xia_neirong"><a href="172.html" >北京中医药大学东直门医院东区（原北京市通州区中医医院）坐落于北京的东大门,始建于1982年，2010年6月正式迁入通州区翠屏西路116号新址。随着通州区国际化新城的新概念，古老的京东大地被赋予了北京发展新磁极，首都功能新载体的全新定位。在这宏大而璀璨的历史背景下</a></div>
+                        </li>
                         <li>
-                            <div class="zhongjian_width_xia_tu"><a href="192.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1225/192.html"><img src=" 2-150324143313543.jpg" tppabs="http://www.olkiosk.com/uploads/150324/2-150324143313543.jpg"></a></div>
-                            <div class="zhongjian_width_xia_neirong"><a href="192.html" tppabs="http://www.olkiosk.com/a/anlizhanshi/2014/1225/192.html">北京协和医院是集医疗、教学、科研于一体的大型三级甲等综合医院，是国家卫生计生委指定的全国疑难重症诊治指导中心，也是最早承担高干保健和外宾医疗任务的医院之一，以学科齐全、技术力量雄厚、特色专科突出、多学科综合优势强大享誉海内外。</a></div>
+                            <div class="zhongjian_width_xia_tu">
+                                <a href="192.html" ><img src="~/Image/DianXing/4%e5%95%86%e4%b8%9a/1%e5%89%8d%e9%97%a8%e5%a4%a7%e8%a1%97.jpg"  /></a>
+                            </div>
+                    
+                            <div class="zhongjian_width_xia_neirong"><a href="192.html">北京协和医院是集医疗、教学、科研于一体的大型三级甲等综合医院，是国家卫生计生委指定的全国疑难重症诊治指导中心，也是最早承担高干保健和外宾医疗任务的医院之一，以学科齐全、技术力量雄厚、特色专科突出、多学科综合优势强大享誉海内外。</a></div>
 
                         </li>
                     </ul>
                 </div>
                 <script type=text/javascript>
-			new Marquee("marqueediv1",0,3,1000,220,10,5000,500,220);
+                    new Marquee("marqueediv1", 0, 3, 1000, 220, 10, 5000, 500, 220);
                 </script>
             </div>
         </div>
@@ -357,51 +307,6 @@ function CompScr(){
 
 
         <!----------end-------------->
-
-
-    </div>
     </div>
 
-
-    <div class="header_top">
-        <div class="w1000">
-            <div class="footer_body">
-                咨询电话：400-648-8881 地址：北京市海淀区上地信息产业基地国际创业园2号楼24层<br>
-                Copyright &copy; 2002-2011 BJehome 北京欧蓝德畅电子技术有限公司 版权所有&nbsp;&nbsp;
-
-            </div>
-        </div>
-
-    </div>
-    <!--下拉菜单-->
-
-    <script type='text/javascript' src="dropdown.js" tppabs="http://www.olkiosk.com/images/js/dropdown.js"></script>
-    <ul id="dropmenu66" class="dropMenu"></ul><ul id="dropmenu3" class="dropMenu">
-        <li><a href="index-8.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/yinyitongxitongfangan/">银医通系统方案</a></li>
-        <li><a href="index-9.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/jiminjiankangkajiejuefangan/">居民健康卡方案</a></li>
-        <li><a href="index-10.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/zhangshangyiyuanjiejuefangan/">掌上医院方案</a></li>
-        <li><a href="index-11.htm" tppabs="http://www.olkiosk.com/a/jiejuefangan/fenzhendaozhenjiejuefangan/">分诊、导诊方案</a></li>
-    </ul><ul id="dropmenu1" class="dropMenu">
-        <li><a href="index-12.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/ruanjianpingtai/">软件产品</a></li>
-        <li><a href="index-13.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/yingjianchanpin/">硬件产品</a></li>
-        <li><a href="index-14.htm" tppabs="http://www.olkiosk.com/a/chanpinzhanshi/ruanjianpingtai/yinyitongxitong/">银医通系统</a></li>
-    </ul><ul id="dropmenu32" class="dropMenu"></ul><ul id="dropmenu6" class="dropMenu">
-        <li><a href="index-15.htm" tppabs="http://www.olkiosk.com/a/xinwenzhongxin/xingyexinwen/">行业新闻</a></li>
-        <li><a href="index-16.htm" tppabs="http://www.olkiosk.com/a/xinwenzhongxin/gongsixinwen/">公司新闻</a></li>
-    </ul><ul id="dropmenu93" class="dropMenu"></ul><ul id="dropmenu105" class="dropMenu"></ul>
-    <script type="text/javascript">cssdropdown.startchrome("navMenu")</script>
-
-    <!--微信-->
-    <script src="weixin.js" tppabs="http://www.olkiosk.com/templets/default/js/weixin.js"></script>
-    <div id="atom-totop">
-        <div class="media">
-            <img src="weixin.png" tppabs="http://www.olkiosk.com/templets/default/images/weixin.png" width="116" height="139" alt="标委会客户端" title="标委会客户端" />
-        </div>
-    </div>
-    <script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F43416447017ff40e76c46e54cf0eb3c2' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <!-- /footer -->
-</body>
-</html>
+  

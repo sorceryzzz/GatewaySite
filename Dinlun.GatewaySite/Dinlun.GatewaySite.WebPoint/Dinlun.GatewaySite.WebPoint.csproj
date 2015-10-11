@@ -177,6 +177,56 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\DianXing\1国家重点项目\1国家博物馆.JPG" />
+    <Content Include="Image\DianXing\1国家重点项目\1国家大剧院.jpg" />
+    <Content Include="Image\DianXing\1国家重点项目\3奥运会体育馆.jpg" />
+    <Content Include="Image\DianXing\1国家重点项目\4北京园博会.jpg" />
+    <Content Include="Image\DianXing\1国家重点项目\5青岛流亭国际机场.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\1苏州中心.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\2苏州太湖新城.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\3北京CBD东扩核心区.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\4苏州体育中心.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\5成都银泰.jpg" />
+    <Content Include="Image\DianXing\2城市综合体\6天津保税区.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\10朔黄发展大厦.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\11恒基中心.JPG" />
+    <Content Include="Image\DianXing\3高端办公楼\1盘古大观.JPG" />
+    <Content Include="Image\DianXing\3高端办公楼\2微软（中国）总部大楼.JPG" />
+    <Content Include="Image\DianXing\3高端办公楼\3中石化办公大楼.JPG" />
+    <Content Include="Image\DianXing\3高端办公楼\4凤凰传媒.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\5北京海关.JPG" />
+    <Content Include="Image\DianXing\3高端办公楼\6湖南大厦.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\7人民日报社.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\8佳兆业广场.jpg" />
+    <Content Include="Image\DianXing\3高端办公楼\9国海广场.jpg" />
+    <Content Include="Image\DianXing\4商业\1前门大街.jpg" />
+    <Content Include="Image\DianXing\4商业\2三里屯village.JPG" />
+    <Content Include="Image\DianXing\4商业\3大钟寺国际广场.jpg" />
+    <Content Include="Image\DianXing\4商业\4沈阳大悦城.jpg" />
+    <Content Include="Image\DianXing\4商业\5西直门华堂商场.jpg" />
+    <Content Include="Image\DianXing\4商业\6十里堡阳光城市广场.jpg" />
+    <Content Include="Image\DianXing\5酒店\1北京饭店二期.jpg" />
+    <Content Include="Image\DianXing\5酒店\2励骏酒店.JPG" />
+    <Content Include="Image\DianXing\5酒店\3西安威斯丁酒店.jpg" />
+    <Content Include="Image\DianXing\5酒店\4北京喜来登酒店.jpg" />
+    <Content Include="Image\DianXing\5酒店\5海航万豪酒店.jpg" />
+    <Content Include="Image\DianXing\6高级住宅\1红玺台.jpg" />
+    <Content Include="Image\DianXing\6高级住宅\2天津湾.jpg" />
+    <Content Include="Image\DianXing\6高级住宅\3万科.五号公社.jpg" />
+    <Content Include="Image\DianXing\6高级住宅\4合生.霄云路8号.jpg" />
+    <Content Include="Image\DianXing\6高级住宅\5-21世纪.jpg" />
+    <Content Include="Image\Dongshizhang\照片-北京鼎伦科技发展有限责任公司总经理刘庆华.JPG" />
+    <Content Include="Image\JieJueFangAn\02.jpg" />
+    <Content Include="Image\JieJueFangAn\03.jpg" />
+    <Content Include="Image\JieJueFangAn\04.jpg" />
+    <Content Include="Image\JieJueFangAn\05.jpg" />
+    <Content Include="Image\logo\LOGO.jpg" />
+    <Content Include="Image\ShouYe\02sanli.JPG" />
+    <Content Include="Image\ShouYe\03guojia.JPG" />
+    <Content Include="Image\ShouYe\01aolin.jpg" />
+    <Content Include="Image\ShouYe\04bangu.JPG" />
+    <Content Include="Image\ShouYe\06suzhou.jpg" />
+    <Content Include="Image\ShouYe\05tiyu.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -191,6 +241,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Style\menu.css" />
+    <Content Include="Style\WebCMS.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -227,12 +279,13 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Home\ZhaoPin.cshtml" />
+    <Content Include="Views\Shared\ShowPage.cshtml" />
+    <Content Include="Views\NewsMsg\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\NewsMsg\" />
     <Folder Include="Views\Prodcut\" />
   </ItemGroup>
   <ItemGroup>
