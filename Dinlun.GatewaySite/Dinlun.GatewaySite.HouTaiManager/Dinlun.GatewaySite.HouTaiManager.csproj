@@ -300,6 +300,7 @@
     <Content Include="Views\Shared\FormCommonInfo.cshtml" />
     <Content Include="Views\ZhaoPin\InsertZhaoPin.cshtml" />
     <Content Include="Views\News\InsertNewsInfo.cshtml" />
+    <Content Include="Views\Home\InserTypeInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -62,7 +62,7 @@
                         @foreach (var item in ((ResultNewsMsgListModel)ViewBag.ResultNewsMsgListModel).NewsMsgList)
                         {
                             <li>
-                                <span style="float:left;"><a href="" class="title">@item.Title</a></span>
+                                <span style="float:left;"><a href="javascript:void(0)" onclick="GetNewsDetail(@item.ID,@item.NewsType)">@item.Title</a></span>
                                 <span style="float:right;">@item.InsertTime</span>
                             </li>
                         }
@@ -110,4 +110,10 @@
             });
 
         });
+
+        function GetNewsDetail(newsId, newsType) {
+            location.href = "http://localhost:55898/NewsMsg/NewsDetail?" + "newsId=" + newsId + "&newsType=" + newsType;
+
+        }
+
     </script>

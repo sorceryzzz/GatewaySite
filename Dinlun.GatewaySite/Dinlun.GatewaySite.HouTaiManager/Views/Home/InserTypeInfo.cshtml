@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "InserTypeInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Matri/js/jquery.min.js"></script>
+<style>
+    input[type="text"] {
+        width: 500px;
+    }
+</style>
+<div id="content-header">
+    <br />
+    <br />
+    <div id="breadcrumb">
+        <h4>添加类别信息</h4>
+    </div>
+</div>
+<div class="form-horizontal" id="updateForm">
+
+    <div class="control-group">
+        <label class="control-label">新闻类别:</label>
+        <div class="controls">
+            @*<input id="newsType" type="text" class="span11" placeholder="新闻类别" value="" style="width:50%">*@
+            <select id="TypeName" style="width:50%">
+                @*<option style="width:50%" value="1">智慧停车场设计与建设方案</option>
+                <option style="width:50%" value="1">研发与生产方案 </option>
+                <option style="width:50%" value="1">运营管理方案</option>
+                <option style="width:50%" value="1">停车场规划与顾问</option>
+
+                <option style="width:50%" value="2">快速出入口系统 </option>
+                <option style="width:50%" value="2">智能诱导系统</option>
+                <option style="width:50%" value="2">智能缴费系统</option>
+                <option style="width:50%" value="2">远程监控系统 </option>
+                <option style="width:50%" value="2">立体车库系统</option>
+                <option style="width:50%" value="2">节能系统</option>
+                <option style="width:50%" value="2">信息安全系统</option>
+                <option style="width:50%" value="2">云存储系统</option>
+
+                <option style="width:50%" value="3">城市综合体 </option>
+                <option style="width:50%" value="3">高端办公楼</option>
+                <option style="width:50%" value="3">商业</option>
+                <option style="width:50%" value="3">酒店</option>
+                <option style="width:50%" value="3">高级住宅</option>
+                <option style="width:50%" value="3">服务过的项目列表</option>*@
+
+                <option style="width:50%" groupAtr="1">智慧停车场设计与建设方案</option>
+                <option style="width:50%" groupatr="1">研发与生产方案 </option>
+                <option style="width:50%" groupatr="1">运营管理方案</option>
+                <option style="width:50%" groupatr="1">停车场规划与顾问</option>
+
+                <option style="width:50%" groupatr="2">快速出入口系统 </option>
+                <option style="width:50%" groupatr="2">智能诱导系统</option>
+                <option style="width:50%" groupatr="2">智能缴费系统</option>
+                <option style="width:50%" groupatr="2">远程监控系统 </option>
+                <option style="width:50%" groupatr="2">立体车库系统</option>
+                <option style="width:50%" groupatr="2">节能系统</option>
+                <option style="width:50%" groupatr="2">信息安全系统</option>
+                <option style="width:50%" groupatr="2">云存储系统</option>
+
+                <option style="width:50%" groupatr="3">城市综合体 </option>
+                <option style="width:50%" groupatr="3">高端办公楼</option>
+                <option style="width:50%" groupatr="3">商业</option>
+                <option style="width:50%" groupatr="3">酒店</option>
+                <option style="width:50%" groupatr="3">高级住宅</option>
+                <option style="width:50%" groupatr="3">服务过的项目列表</option>
+
+
+
+
+
+
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">图片链接:</label>
+        <div class="controls">
+            <input id="imageUrl" type="text" class="span11" placeholder="图片链接" value="" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">描述:</label>
+        <div class="controls">
+            <textarea id="newsContent" class="span11" name="" style="width:54%"></textarea>
+        </div>
+    </div>
+    <br />
+    <div class="form-actions">
+        <button type="submit" id="submitBtn" class="btn btn-success">提交</button>
+    </div>
+</div>
+
+@section Scripts{}
+<script type="text/javascript">
+    $(function() {
+
+        //绑定点击事件
+        $("#submitBtn").click(function () {
+
+            var typeID = $("#TypeName").find("option:selected").attr("groupatr");
+
+            var typeName = $("#TypeName").find("option:selected").text();
+
+
+            var imageUrl = $("#imageUrl").val();
+            var newsContent = $("#newsContent").val();
+            
+
+            $.post("InserTypeInfoPost", {
+                typeID:typeID,
+                typeName: typeName,
+                imageUrl: imageUrl,
+                newsContent: newsContent
+            }, function (data) {
+
+                if (data.toLowerCase() == "success") {
+
+                    alert("添加类别信息: 成功 ！！！");
+                } else {
+                    alert("添加类别信息:失败，请添完整的信息!!!");
+                }
+
+
+
+            });
+        });
+    })
+</script>

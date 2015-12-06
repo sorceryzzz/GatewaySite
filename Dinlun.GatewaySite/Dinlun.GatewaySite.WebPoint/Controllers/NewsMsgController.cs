@@ -43,8 +43,16 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         /// <param name="newsType"></param>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult NewsDetail(int newsId, int newsType)
+        public ActionResult NewsDetail()
         {
+
+            int newsId = Request.QueryString.Get("newsId")==null?0:int.Parse(Request.QueryString.Get("newsId"));
+            int newsType = Request.QueryString.Get("newsType") == null ? 0 : int.Parse(Request.QueryString.Get("newsType"));
+
+            var obj = _newsMsgBllInstance.GetNewsMsgDetail(newsId);
+            ViewData.Model = obj;
+         
+
             return View();
         }
         /// <summary>
@@ -52,7 +60,8 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         /// </summary>
         /// <param name="newsId"></param>
         /// <returns></returns>
-        public ContentResult GetNewsMsgDetail(int newsId,int newsType)
+        [HttpPost]
+        public ContentResult GetNewsMsgDetailPost(int newsId,int newsType)
         {
 
             #region - check paras -
@@ -98,8 +107,6 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
             ResultNewsMsgListModel rlModel = new ResultNewsMsgListModel();
             rlModel.NewsMsgList = newsMsgList;
             rlModel.PageCount = pageCount;
-
-
 
             return rlModel;
             #endregion

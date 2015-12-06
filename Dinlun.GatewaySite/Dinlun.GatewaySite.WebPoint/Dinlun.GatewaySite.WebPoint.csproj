@@ -285,10 +285,10 @@
     <Content Include="Views\Shared\ShowPage.cshtml" />
     <Content Include="Views\NewsMsg\Index.cshtml" />
     <Content Include="Views\Home\GetTypeInfo.cshtml" />
+    <Content Include="Views\NewsMsg\NewsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Prodcut\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

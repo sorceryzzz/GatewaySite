@@ -1,4 +1,5 @@
 ﻿using Dinlun.GatewaySite.Bll;
+using Dinlun.GatewaySite.Bll.Type;
 using Dinlun.GatewaySite.Bll.ZhaoPin;
 using Dinlun.GatewaySite.Model.Prodcut;
 using Dinlun.GatewaySite.Model.ZhaoPin;
@@ -14,6 +15,7 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
     {
         private ProdcutBll prodcutBll = new ProdcutBll();
         private ZhaoPinBll zhaoPinBll = new ZhaoPinBll();
+        private TypeInfoBll typeInfoBll = new TypeInfoBll();
 
 
 
@@ -70,8 +72,10 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
        public ActionResult GetTypeInfo(int typeId,string name)
        {
 
+          var tInfoModel= typeInfoBll.GetTypeInfoModel(typeId,name);
+          ViewData.Model = tInfoModel;
+          
            return View();
-
        }
     }
 }
