@@ -1,0 +1,93 @@
+﻿@{
+    Layout = null;
+}
+<div id="ieListConent">
+    <table class="table table-bordered data-table dataTable">
+
+        <thead>
+            <tr role="row">
+                @*<th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 60px;">
+                    <div class="DataTables_sort_wrapper">ID<span class="DataTables_sort_icon css_right ui-icon ui-icon-triangle-1-n"></span></div>
+                </th>*@
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 120px;">
+                    <div class="DataTables_sort_wrapper">机构ID<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 299px;">
+                    <div class="DataTables_sort_wrapper">机构名称<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">城市<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">额度<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">账号数量<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">录入时间<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">更新时间<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">录用人<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">备注<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 200px;">
+                    <div class="DataTables_sort_wrapper">操作<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+                <th class="ui-state-default" role="columnheader" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 173px;">
+                    <div class="DataTables_sort_wrapper">审核状态<span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span></div>
+                </th>
+            </tr>
+        </thead>
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+
+            @{foreach (var incomeItem in ViewData.Model)
+            {
+                <tr class="gradeA odd">
+                    @*<td class=" sorting_1">@incomeItem.Id</td>*@
+                    <td class=" ">@incomeItem.InstionId</td>
+                    <td class=" ">@incomeItem.InstionName</td>
+                    <td class="center ">@incomeItem.CityName</td>
+                    <td class=" sorting_1"> @incomeItem.Amout</td>
+                    <td class=" ">@incomeItem.AccountNum</td>
+                    <td class=" ">@incomeItem.CreateTime</td>
+                    <td class="center ">@incomeItem.UpdateTime</td>
+                    <td class=" sorting_1">@incomeItem.Operatorname</td>
+                    <td class=" ">@incomeItem.MkComment</td>
+                    <td class=" ">
+                        <a href="#" onclick="UpdateSmallById(this)" data-toggle="modal" identstr="@incomeItem.Id" class="btn btn-warning btn-mini">修改</a>
+                        <a identstr="@incomeItem.Id" onclick="DeleteSmallByID(this)" class="btn btn-danger btn-mini sticky">删除</a>
+                        <br />
+                        @*<a>激活情况</a>*@
+                    </td>
+                    <td class=" sorting_1">
+                        @if (incomeItem.Check == 0)
+                        {
+                            <a id="@incomeItem.Id" onclick="CheckThisSubmit(this)" class="btn btn-info btn-mini">通过审核</a>
+                        }
+                        else
+                        {
+                            <a href="javascript:void(0)" id="@incomeItem.Id" style="cursor:default" class="btn btn-info btn-mini">已审核</a>
+                        }
+                    </td>
+                </tr>
+            }}
+        </tbody>
+    </table>
+
+
+
+    @*****************************************分页开始**********************************@
+    <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers" id="DataTables_Table_0_paginate">
+        @Html.Partial("Page", (ViewDataDictionary)ViewBag.dataDictionary)
+    </div>
+    @*****************************************分页结束**********************************@
+</div>
+
+
+@section Scripts{}

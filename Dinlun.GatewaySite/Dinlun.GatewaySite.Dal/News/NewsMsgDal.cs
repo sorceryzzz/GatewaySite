@@ -14,6 +14,64 @@ namespace Dinlun.GatewaySite.Dal.News
     {
 
         #region - method -
+
+
+       /// <summary>
+       /// 添加新闻信息
+       /// </summary>
+       /// <param name="nmModel"></param>
+       /// <returns></returns>
+       public bool InsertNewsInfo(NewsMsgModel nmModel)
+       {
+           #region - sql qy -
+           string insertSql = @"INSERT INTO `dinlun`.`newsmsg`
+                                       (
+                                        `Title`,
+                                        `Content`,
+                                        `NewsType`,
+                                        `ImgUrl`,
+                                        `InsertTime`,
+                                        `avg1`,
+                                        `avg2`)
+                                VALUES (
+                                        @Title,
+                                        @Content,
+                                        @NewsType,
+                                        @ImgUrl,
+                                        @InsertTime,
+                                        @avg1,
+                                        @avg2);";
+           #endregion
+
+           #region - paras -
+           MySqlParameter[] paras = { 
+                                new MySqlParameter("@Title",nmModel.Title),   
+                                new MySqlParameter("@Content",nmModel.Content),
+                                new MySqlParameter("@NewsType",nmModel.NewsType),
+                                new MySqlParameter("@ImgUrl",nmModel.ImageUrl),
+                                new MySqlParameter("@InsertTime",DateTime.Now),
+                                new MySqlParameter("@Avg1",nmModel.Avg1),
+                                new MySqlParameter("@Avg2",nmModel.Avg2)
+                                   };
+           #endregion
+
+           #region - excute -
+           try
+           {
+
+               //记录查询
+               int rlt = DbHelperMySql.ExecuteNonQuery(DbHelperMySql.connectionStringManager, CommandType.Text, insertSql, paras);
+
+               return rlt > 0;
+           }
+           catch (Exception ex)
+           {
+
+               return false;
+           }
+           #endregion
+       }
+
        /// <summary>
        /// 查询新闻动态详情
        /// </summary>

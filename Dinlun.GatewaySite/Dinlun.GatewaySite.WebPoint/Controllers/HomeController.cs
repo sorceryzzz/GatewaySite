@@ -1,5 +1,7 @@
 ﻿using Dinlun.GatewaySite.Bll;
+using Dinlun.GatewaySite.Bll.ZhaoPin;
 using Dinlun.GatewaySite.Model.Prodcut;
+using Dinlun.GatewaySite.Model.ZhaoPin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
     public class HomeController : Controller
     {
         private ProdcutBll prodcutBll = new ProdcutBll();
-
+        private ZhaoPinBll zhaoPinBll = new ZhaoPinBll();
 
 
 
@@ -49,9 +51,11 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         [HttpGet]
         public ActionResult ZhaoPin()
         {
+            ViewBag.ZhaoPinList = zhaoPinBll.GetZhaoPinList();
 
             return View();
         }
+     
         /// <summary>
         /// 联系我们
         /// </summary>
@@ -62,5 +66,12 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
 
             return View();
         }
+       [HttpGet]
+       public ActionResult GetTypeInfo(int typeId,string name)
+       {
+
+           return View();
+
+       }
     }
 }

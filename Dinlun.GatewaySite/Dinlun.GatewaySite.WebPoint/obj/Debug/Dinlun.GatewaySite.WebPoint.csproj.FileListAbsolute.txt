@@ -72,3 +72,11 @@ F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\
 F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\obj\Debug\Dinlun.GatewaySite.WebPoint.csprojResolveAssemblyReference.cache
 F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\obj\Debug\Dinlun.GatewaySite.WebPoint.dll
 F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\obj\Debug\Dinlun.GatewaySite.WebPoint.pdb
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Bll.dll
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Dal.dll
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Model.dll
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Common.dll
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Bll.pdb
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Dal.pdb
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Model.pdb
+F:\WorkSpace\NET\GatewaySite\Dinlun.GatewaySite\Dinlun.GatewaySite.WebPoint\bin\Dinlun.GatewaySite.Common.pdb

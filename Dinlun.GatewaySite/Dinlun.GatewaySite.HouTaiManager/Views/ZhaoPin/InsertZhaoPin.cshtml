@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "InsertZhaoPin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Matri/js/jquery.min.js"></script>
+
+
+<style>
+    input[type="text"] {
+        width: 500px;
+    }
+</style>
+<div id="content-header">
+    <br />
+    <br />
+    <div id="breadcrumb">
+        <h4>添加招聘信息</h4>
+    </div>
+</div>
+<div class="form-horizontal" id="updateForm">
+    <div class="control-group">
+        <label class="control-label">职位名称:</label>
+        <div class="controls">
+            <input id="titleName" type="text" class="span11" placeholder="职位名称" value=""  style="width:50%">
+            <input type="text" name="id" value="" style="display:none;" />
+        </div>
+    </div>
+
+
+    <div class="control-group">
+        <label class="control-label">邮箱:</label>
+        <div class="controls">
+            <input id="email" type="text" class="span11" placeholder="邮箱" value="" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">部门:</label>
+        <div class="controls">
+            <input id="department" type="text" class="span11" placeholder="部门" value=""  style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">岗位职责:</label>
+        <div class="controls">
+            <input id="dutyDesc" type="text" class="span11" placeholder="岗位职责" value=""  style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">待遇:</label>
+        <div class="controls">
+            <input id="daiYu" type="text" class="span11" placeholder="待遇" value=""  style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">工作地点:</label>
+        <div class="controls">
+            <input id="place" type="text" class="span11" placeholder="工作地点" value="" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">岗位描述:</label>
+        <div class="controls">
+            <textarea id="descDetail" class="span11" name="" style="width:54%"></textarea>
+        </div>
+    </div>
+    <br />
+    <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-success">提交</button>
+        </div>
+</div>
+
+@section Scripts{
+
+        
+}
+
+
+<script type="text/javascript"> 
+
+    $(function() {
+        //绑定点击事件
+        $("#submitBtn").click(function () {
+
+            var titleName = $("#titleName").val();
+            var email = $("#email").val();
+            var department = $("#department").val();
+            var dutyDesc = $("#dutyDesc").val();
+            var daiYu = $("#daiYu").val();
+            var place = $("#place").val();
+            var descDetail = $("#descDetail").val();
+
+            
+            $.post("InsertZhaoPinPost", {
+                titleName: titleName,
+                email: email,
+                department: department,
+                dutyDesc: dutyDesc,
+                daiYu: daiYu,
+                place: place,
+                descDetail: descDetail,
+            }, function (data) {
+
+                if (data.toLowerCase()=="success") {
+
+                    alert("添加招聘信息: 成功 ！！！");
+                } else {
+                    alert("添加招聘信息:失败，请添完整的信息!!!");
+                }
+            });
+
+        });
+    })
+
+
+
+</script>

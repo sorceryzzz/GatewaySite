@@ -158,9 +158,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ZhaoPinController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,8 +177,94 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Matri\css\bootstrap-responsive.min.css" />
+    <Content Include="Matri\css\bootstrap-wysihtml5.css" />
+    <Content Include="Matri\css\bootstrap.min.css" />
+    <Content Include="Matri\css\colorpicker.css" />
+    <Content Include="Matri\css\datepicker.css" />
+    <Content Include="Matri\css\Finace.css" />
+    <Content Include="Matri\css\fullcalendar.css" />
+    <Content Include="Matri\css\jquery.gritter.css" />
+    <Content Include="Matri\css\matrix-login.css" />
+    <Content Include="Matri\css\matrix-media.css" />
+    <Content Include="Matri\css\matrix-style.css" />
+    <Content Include="Matri\css\select2.css" />
+    <Content Include="Matri\css\uniform.css" />
+    <Content Include="Matri\font-awesome\css\font-awesome.css" />
+    <Content Include="Matri\img\alpha.html" />
+    <Content Include="Matri\img\breadcrumb.png" />
+    <Content Include="Matri\img\demo\av1.jpg" />
+    <Content Include="Matri\img\demo\av2.jpg" />
+    <Content Include="Matri\img\demo\av3.jpg" />
+    <Content Include="Matri\img\demo\av4.jpg" />
+    <Content Include="Matri\img\demo\av5.jpg" />
+    <Content Include="Matri\img\demo\demo-image1.jpg" />
+    <Content Include="Matri\img\demo\demo-image2.jpg" />
+    <Content Include="Matri\img\demo\demo-image3.jpg" />
+    <Content Include="Matri\img\demo\envelope.png" />
+    <Content Include="Matri\img\gallery\imgbox1.jpg" />
+    <Content Include="Matri\img\gallery\imgbox2.jpg" />
+    <Content Include="Matri\img\gallery\imgbox3.jpg" />
+    <Content Include="Matri\img\gallery\imgbox4.jpg" />
+    <Content Include="Matri\img\gallery\imgbox5.jpg" />
+    <Content Include="Matri\img\glyphicons-halflings-white.png" />
+    <Content Include="Matri\img\glyphicons-halflings.html" />
+    <Content Include="Matri\img\gritter.png" />
+    <Content Include="Matri\img\hue.png" />
+    <Content Include="Matri\img\larrow.png" />
+    <Content Include="Matri\img\line.png" />
+    <Content Include="Matri\img\logo.png" />
+    <Content Include="Matri\img\menu-active.png" />
+    <Content Include="Matri\img\rarrow.png" />
+    <Content Include="Matri\img\saturation.png" />
+    <Content Include="Matri\img\select2.png" />
+    <Content Include="Matri\img\spinner.gif" />
+    <Content Include="Matri\img\sprite.png" />
+    <Content Include="Matri\js\bootstrap-colorpicker.js" />
+    <Content Include="Matri\js\bootstrap-datepicker.js" />
+    <Content Include="Matri\js\bootstrap-wysihtml5.js" />
+    <Content Include="Matri\js\bootstrap.min.js" />
+    <Content Include="Matri\js\excanvas.min.js" />
+    <Content Include="Matri\js\fullcalendar.min.js" />
+    <Content Include="Matri\js\jquery.dataTables.min.js" />
+    <Content Include="Matri\js\jquery.flot.min.js" />
+    <Content Include="Matri\js\jquery.flot.pie.min.js" />
+    <Content Include="Matri\js\jquery.flot.resize.min.js" />
+    <Content Include="Matri\js\jquery.gritter.min.js" />
+    <Content Include="Matri\js\jquery.min.js" />
+    <Content Include="Matri\js\jquery.peity.min.js" />
+    <Content Include="Matri\js\jquery.toggle.buttons.html" />
+    <Content Include="Matri\js\jquery.ui.custom.js" />
+    <Content Include="Matri\js\jquery.uniform.js" />
+    <Content Include="Matri\js\jquery.validate.js" />
+    <Content Include="Matri\js\jquery.wizard.js" />
+    <Content Include="Matri\js\maruti.html" />
+    <Content Include="Matri\js\masked.js" />
+    <Content Include="Matri\js\matrix.calendar.js" />
+    <Content Include="Matri\js\matrix.charts.js" />
+    <Content Include="Matri\js\matrix.chat.js" />
+    <Content Include="Matri\js\matrix.dashboard.js" />
+    <Content Include="Matri\js\matrix.form_common.js" />
+    <Content Include="Matri\js\matrix.form_validation.js" />
+    <Content Include="Matri\js\matrix.interface.js" />
+    <Content Include="Matri\js\matrix.js" />
+    <Content Include="Matri\js\matrix.login.js" />
+    <Content Include="Matri\js\matrix.popover.js" />
+    <Content Include="Matri\js\matrix.tables.js" />
+    <Content Include="Matri\js\matrix.wizard.js" />
+    <Content Include="Matri\js\select2.min.js" />
+    <Content Include="Matri\js\wysihtml5-0.3.0.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Matri\font-awesome\css\Descr.WD3" />
+    <Content Include="Matri\font-awesome\font\Descr.WD3" />
+    <Content Include="Matri\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Matri\font-awesome\font\fontawesome-webfont.eot%40" />
+    <Content Include="Matri\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Matri\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Matri\img\demo\Descr.WD3" />
+    <Content Include="Matri\img\Descr.WD3" />
+    <Content Include="Matri\img\gallery\Descr.WD3" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -202,33 +288,18 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ZhaoPin\Index.cshtml" />
+    <Content Include="Views\Shared\Page.cshtml" />
+    <Content Include="Views\Shared\PageAll.cshtml" />
+    <Content Include="Views\Shared\PageHead.cshtml" />
+    <Content Include="Views\Shared\PageListConent.cshtml" />
+    <Content Include="Views\Shared\FormCommonInfo.cshtml" />
+    <Content Include="Views\ZhaoPin\InsertZhaoPin.cshtml" />
+    <Content Include="Views\News\InsertNewsInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +310,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Bll\Dinlun.GatewaySite.Bll.csproj">
+      <Project>{3d285ff8-13ab-4193-812b-775bfde2ddd0}</Project>
+      <Name>Dinlun.GatewaySite.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Common\Dinlun.GatewaySite.Common.csproj">
+      <Project>{91b0ca9a-76ba-4ee6-9c2d-91c55f999a5a}</Project>
+      <Name>Dinlun.GatewaySite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Dal\Dinlun.GatewaySite.Dal.csproj">
+      <Project>{fd317724-6dd1-4d7f-ab9a-a056621863fd}</Project>
+      <Name>Dinlun.GatewaySite.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dinlun.GatewaySite.Model\Dinlun.GatewaySite.Model.csproj">
+      <Project>{a9aefa5a-b51f-4da0-b913-bf2d1aa31514}</Project>
+      <Name>Dinlun.GatewaySite.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

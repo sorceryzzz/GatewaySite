@@ -45,6 +45,7 @@
     <Compile Include="Prodcut\ProdcutModel.cs" />
     <Compile Include="Prodcut\ProductDetailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Type\TypeInfoModel.cs" />
     <Compile Include="ZhaoPin\ZhaoPinModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

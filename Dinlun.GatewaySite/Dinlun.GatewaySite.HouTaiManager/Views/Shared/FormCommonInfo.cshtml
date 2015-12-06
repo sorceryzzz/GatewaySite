@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "FormCommonInfo";
+}
+
+<style>
+    input[type="text"] {
+        width: 500px;
+    }
+</style>
+<div id="content-header">
+    <br />
+    <br />
+    <div id="breadcrumb">
+        <h4>修改财务信息</h4>
+        
+    </div>
+</div>
+<div class="form-horizontal" id="updateForm">
+    <div class="control-group">
+        <label class="control-label">城市名称:</label>
+        <div class="controls">
+            <input id="cityName" type="text" class="span11" placeholder="城市名称" value="" name="cityName" style="width:50%">
+            <input type="text" name="id" value="" style="display:none;" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">机构名称:</label>
+        <div class="controls">
+            <input id="instionName" type="text" class="span11" placeholder="代理商名称" value="" name="instionName" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">额度:</label>
+        <div class="controls">
+
+            <input id="amout" type="text" class="span11" placeholder="额度" value="" name="amout" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">帐号数量:</label>
+        <div class="controls">
+            <input id="accountNum" type="text" class="span11" placeholder="帐号数量" value="" name="accountNum" style="width:50%">
+
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">录用人:</label>
+        <div class="controls">
+            <input id="operatorname" type="text" class="span11" placeholder="录用人" value="" name="operatorname" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">备注:</label>
+        <div class="controls">
+            <textarea id="remark" class="span11" name="" style="width:54%"></textarea>
+        </div>
+    </div>
+    <br/>
+
+    @*<div class="form-actions">
+        <button type="submit" id="submitBtn" class="btn btn-success">提交</button>
+    </div>*@
+</div>

@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+<div class="widget-box">
+    <div class="widget-title">
+        <span class="icon"><i class="icon-th"></i></span>
+        <h5>Data table</h5>
+    </div>
+
+    <div class="widget-content nopadding">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+            <div class="">
+            </div>
+        </div>
+    </div>
+
+    <div id="DataTables_Table_0_length" class="dataTables_length">
+
+        <table width="1000" height="200" id="stCondation">
+            <tr>
+                <td><span style="width:60px">地区城市：</span><input type="text" id="cityName" class="mytdInput"></td>
+                <td><span style="width:60px">支付额度：</span><input type="text" id="amout" class="mytdInput"></td>
+                <td rowspan="3">
+                    <br /><br /><br /><br /><br />
+                    <button class="btn btn-success btn-large" id="selectCondition" onclick="SelectSmallList(0)">查询</button>
+                    @*<button class="btn btn-primary btn-large" onclick="JumpEntering()">录入</button>*@
+                </td>
+            </tr>
+            <tr>
+                <td><span>机构名称：</span><input type="text" id="instionName" class="mytdInput"></td>
+                <td><span>账号数量：</span><input type="text" id="accountNum" class="mytdInput"></td>
+            </tr>
+            <tr>
+                <td>
+                    <span>开始时间：</span><div data-date="" class="input-append date datepicker">
+                                          <input id="startTime"  type="text" value="@DateTime.Now.AddDays(-1).ToString("MM/dd/yyyy")" data-date-format="mm-dd-yyyy" class="span11">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                    </div>
+                </td>
+                <td>
+                    <span>结束时间：</span><div data-date="" class="input-append date datepicker">
+                                          <input id="endTime" type="text" value="@DateTime.Now.ToString("MM/dd/yyyy")" data-date-format="mm-dd-yyyy" class="span11">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

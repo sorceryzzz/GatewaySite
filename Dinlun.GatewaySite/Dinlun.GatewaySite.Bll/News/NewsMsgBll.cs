@@ -25,7 +25,15 @@ namespace Dinlun.GatewaySite.Bll.News
 
        #region - method -
 
-
+        /// <summary>
+       /// 添加新闻信息
+       /// </summary>
+       /// <param name="nmModel"></param>
+       /// <returns></returns>
+       public bool InsertNewsInfo(NewsMsgModel nmModel)
+       {
+          return  _nesmsgDalInstance.InsertNewsInfo(nmModel);
+       }
         /// <summary>
        /// 查询新闻动态详情
        /// </summary>

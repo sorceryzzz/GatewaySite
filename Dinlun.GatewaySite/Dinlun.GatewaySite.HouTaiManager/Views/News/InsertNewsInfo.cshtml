@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "InsertNewsInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Matri/js/jquery.min.js"></script>
+
+
+<style>
+    input[type="text"] {
+        width: 500px;
+    }
+</style>
+<div id="content-header">
+    <br />
+    <br />
+    <div id="breadcrumb">
+        <h4>添加新闻信息</h4>
+    </div>
+</div>
+<div class="form-horizontal" id="updateForm">
+    <div class="control-group">
+        <label class="control-label">新闻标题:</label>
+        <div class="controls">
+            <input id="newsName" type="text" class="span11" placeholder="新闻标题" value="" style="width:50%">
+            <input type="text" name="id" value="" style="display:none;" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">新闻类别:</label>
+        <div class="controls">
+            @*<input id="newsType" type="text" class="span11" placeholder="新闻类别" value="" style="width:50%">*@
+        
+            <select id="newsType" style="width:50%">
+                <option style="width:50%" value="1">企业动态</option>
+                <option style="width:50%" value="2">行业新闻 </option>
+                <option style="width:50%" value="3">媒体新闻</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="control-group">
+        <label class="control-label">图片链接:</label>
+        <div class="controls">
+            <input id="imageUrl" type="text" class="span11" placeholder="图片链接" value="" style="width:50%">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">新闻内容:</label>
+        <div class="controls">
+            <textarea id="newsContent" class="span11" name="" style="width:54%"></textarea>
+        </div>
+    </div>
+    <br />
+    <div class="form-actions">
+        <button type="submit" id="submitBtn" class="btn btn-success">提交</button>
+    </div>
+</div>
+
+@section Scripts{}
+
+<script type="text/javascript">
+    $(function () {
+
+        $("#submitBtn").click(function () {
+
+            var newsName = $("#newsName").val();
+            var newsType = $("#newsType").val();
+            var imageUrl = $("#imageUrl").val();
+            var newsContent = $("#newsContent").val();
+            
+            $.post("InsertNewsInfoPost", {
+                newsName: newsName,
+                newsType: newsType,
+                imageUrl: imageUrl,
+                newsContent: newsContent
+            }, function (data) {
+                if (data.toLowerCase() == "success") {
+
+                    alert("添加新闻信息: 成功 ！！！");
+                } else {
+                    alert("添加新闻信息:失败，请添完整的信息!!!");
+                }
+            });
+        });
+    })
+</script>
+

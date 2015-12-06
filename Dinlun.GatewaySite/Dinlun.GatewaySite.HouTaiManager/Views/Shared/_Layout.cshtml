@@ -1,45 +1,155 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>Matrix Admin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/Matri/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Matri/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="~/Matri/css/colorpicker.css" />
+    <link rel="stylesheet" href="~/Matri/css/datepicker.css" />
+    <link rel="stylesheet" href="~/Matri/css/uniform.css" />
+    <link rel="stylesheet" href="~/Matri/css/select2.css" />
+    <link rel="stylesheet" href="~/Matri/css/fullcalendar.css" />
+    <link rel="stylesheet" href="~/Matri/css/matrix-style.css" />
+    <link rel="stylesheet" href="~/Matri/css/matrix-media.css" />
+    <link rel="stylesheet" href="~/Matri/css/bootstrap-wysihtml5.css" />
+    <link rel="stylesheet" href="~/Matri/css/jquery.gritter.css" />
+    <link href="~/Matri/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <link href="~/Matri/css/Finace.css" rel="stylesheet" />
 
+
+
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/jquery.gritter.css" />
+        <link rel="stylesheet" href="css/matrix-style.css" />
+        <link rel="stylesheet" href="css/matrix-media.css" />
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>*@
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
-        </footer>
+    <!--Header-part-->
+    <div id="header">
+        <h1><a href="dashboard.html">Matrix Admin</a></h1>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!--close-Header-part-->
+    <!--top-Header-menu-->
+    <div id="user-nav" class="navbar navbar-inverse">
+        <ul class="nav">
+            <li class="dropdown" id="profile-messages">
+                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" id="menu-messages">
+                <a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a class="sAdd" title="" href="#"><i class="icon-plus"></i> new message</a></li>
+                    <li class="divider"></li>
+                    <li><a class="sInbox" title="" href="#"><i class="icon-envelope"></i> inbox</a></li>
+                    <li class="divider"></li>
+                    <li><a class="sOutbox" title="" href="#"><i class="icon-arrow-up"></i> outbox</a></li>
+                    <li class="divider"></li>
+                    <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
+                </ul>
+            </li>
+
+            <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
+            <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+        </ul>
+    </div>
+    <!--close-top-Header-menu-->
+    <!--start-top-serch-->
+    <div id="search">
+        <input type="text" placeholder="Search here..." />
+        <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+    </div>
+    <!--close-top-serch-->
+    <!--sidebar-menu-->
+    <div id="sidebar">
+        <a href="#" class="visible-phone"><i class="icon icon-home"></i> 大B财务管理</a>
+        <ul>
+            <li class="submenu open">
+                <a href="#"><i class="icon icon-list"></i> <span>大B财务管理</span> <span class="label label-important"></span></a>
+                <ul style="display: block;">
+                    <li><a href="~/BigFinance/BigFinance">查询大B财务信息</a></li>
+                    <li><a href="~/BigFinance/BigEnteringorUpdate">录入大B财务信息</a></li>
+                </ul>
+            </li>
+            <li class="submenu open">
+                <a href="#"><i class="icon icon-list"></i> <span>小B财务管理</span> <span class="label label-important"></span></a>
+                <ul style="display: block;">
+                    <li><a href="~/SmallFinance/Index">查询小B财务信息</a></li>
+                    <li><a href="~/SmallFinance/EnterFinaceInfo">录入小B财务信息</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!--sidebar-menu-->
+    <!--main-container-part-->
+    <div id="content">
+        <!--breadcrumbs-->
+        @RenderBody()
+    </div>
+
+
+
+    <!--end-Footer-part-->
+    <script src="~/Matri/js/jquery.min.js"></script>
+    <script src="~/Matri/js/jquery.ui.custom.js"></script>
+    <script src="~/Matri/js/bootstrap.min.js"></script>
+    <script src="~/Matri/js/bootstrap-colorpicker.js"></script>
+    <script src="~/Matri/js/bootstrap-datepicker.js"></script>
+    <script src="~/Matri/js/jquery.toggle.buttons.html"></script>
+    <script src="~/Matri/js/masked.js"></script>
+    <script src="~/Matri/js/jquery.uniform.js"></script>
+    <script src="~/Matri/js/select2.min.js"></script>
+    <script src="~/Matri/js/matrix.js"></script>
+    <script src="~/Matri/js/matrix.form_common.js"></script>
+    <script src="~/Matri/js/wysihtml5-0.3.0.js"></script>
+    <script src="~/Matri/js/jquery.peity.min.js"></script>
+    <script src="~/Matri/js/bootstrap-wysihtml5.js"></script>
+    <script src="~/Matri/js/jquery.gritter.min.js"></script>
+    <script src="~/Matri/js/jquery.peity.min.js"></script>
+    <script src="~/Matri/js/matrix.interface.js"></script>
+    <script src="~/Matri/js/matrix.popover.js"></script>
+
+
+
+    <script type="text/javascript">
+        // This function is called from the pop-up menus to transfer to
+        // a different page. Ignore if the value returned is a null string:
+        function goPage(newURL) {
+
+            // if url is empty, skip the menu dividers and reset the menu selection to default
+            if (newURL != "") {
+
+                // if url is "-", it is this page -- reset the menu:
+                if (newURL == "-") {
+                    resetMenu();
+                }
+                    // else, send page to designated URL
+                else {
+                    document.location.href = newURL;
+                }
+            }
+        }
+
+        // resets the menu selection upon entry to this page:
+        function resetMenu() {
+            document.gomenu.selector.selectedIndex = 2;
+        }
+    </script>
+    @RenderSection("Scripts")
 </body>
 </html>

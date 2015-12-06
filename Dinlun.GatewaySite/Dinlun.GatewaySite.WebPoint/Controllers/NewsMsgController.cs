@@ -45,9 +45,6 @@ namespace Dinlun.GatewaySite.WebPoint.Controllers
         [HttpGet]
         public ActionResult NewsDetail(int newsId, int newsType)
         {
-
-
-
             return View();
         }
         /// <summary>
